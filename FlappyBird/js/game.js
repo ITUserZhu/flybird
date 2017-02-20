@@ -129,25 +129,34 @@ Game.prototype = {
 	   		that.isStart = false;
 	   	}
 
+
+
+
 	    // 恢复到默认状态
 	    that.ctx.restore();
-
 	    if(that.isStart) {
 	      // 动画函数处理，继续下一次渲染
 	  		window.requestAnimationFrame( render );
 	    }
+	    else{
+	    	box.style.display = 'block';
+	    }
 		};
-
+		// console.log(that.isStart)
 		window.requestAnimationFrame( render );
 	},
 
 	// 绑定事件
 	bindEvent: function() {
 		var that = this;
+		var box = document.getElementById('box');
+	  	document.addEventListener('click', function() {
+	  		that.hero.changeSpeed( -0.2 );
+	  	});
 
-  	that.cv.addEventListener('click', function() {
-  		that.hero.changeSpeed( -0.2 );
-  	});
+	  	box.addEventListener('click',function() {
+	  		window.location.reload();
+	  	})
 	}
 };
 

@@ -42,7 +42,7 @@ Pipe.prototype = {
 
 	// 随机生成上边管道的高度
 	calcPipeHeight: function() {
-		var pipeTopHeight = Math.random() * 200 + 50;
+		var pipeTopHeight = Math.random() * 200 + 100;
 		this.pipeTopY = pipeTopHeight - this.imgH;
 		this.pipeDownY = pipeTopHeight + 50;
 	}

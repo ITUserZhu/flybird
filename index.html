@@ -13,11 +13,34 @@
     left:50%;
     transform:translateX(-50%);
   }
+  .box{
+    width: 200px;
+    height: 100px;
+    background-color: rgba(255,0,255,.4);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform:translate(-50%,-50%);
+    cursor: pointer;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 30px;
+    display: none;
+  } 
   </style>
 </head>
 
 <body>
-  <div id="cv" class="cv"></div>
+  <div id="cv" class="cv">
+    
+  </div>
+  <div class="box" id="box">
+      点击重新开始
+  </div>
+
   <!-- 引入 辅助工具方法 -->
   <script src="FlappyBird/js/utils.js"></script>
   <!-- 引入 小鸟对象 -->

@@ -43,6 +43,7 @@ FlyObj.createCV = function( id ) {
   var dv = document.getElementById(id);
 
   var cv = document.createElement('canvas');
+  
   cv.height = 600;
   cv.width = 800;
 
