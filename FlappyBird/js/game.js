@@ -131,7 +131,7 @@ Game.prototype = {
 
 
 
-
+	   	var box = document.querySelector('#box')
 	    // 恢复到默认状态
 	    that.ctx.restore();
 	    if(that.isStart) {
@@ -153,10 +153,15 @@ Game.prototype = {
 	  	document.addEventListener('click', function() {
 	  		that.hero.changeSpeed( -0.2 );
 	  	});
-
 	  	box.addEventListener('click',function() {
-	  		window.location.reload();
-	  	})
+	    var dv = document.querySelector('#cv')
+	    dv.innerHTML = '<div class="box" id="box">点击重新开始</div>'
+	    var game = new Fly.Game('cv');
+	    game.startGame();
+	  })
+	  	// box.addEventListener('click',function() {
+	  	// 	window.location.reload();
+	  	// })
 	}
 };
 

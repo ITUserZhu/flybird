@@ -6,7 +6,7 @@
   <title>Document</title>
 
   <style>
-  .cv{
+  .dv{
     /* border: 1px solid red; */
     margin: 0 auto;
     position: absolute;
@@ -34,12 +34,12 @@
 </head>
 
 <body>
-  <div id="cv" class="cv">
-    
-  </div>
-  <div class="box" id="box">
+  <div id="cv" class="dv">
+    <div class="box" id="box">
       点击重新开始
   </div>
+  </div>
+  
 
   <!-- 引入 辅助工具方法 -->
   <script src="FlappyBird/js/utils.js"></script>
@@ -56,6 +56,8 @@
   <script type="text/javascript">
   var game = new Fly.Game('cv');
   game.startGame();
+
+  
   </script>
 </body>
 
